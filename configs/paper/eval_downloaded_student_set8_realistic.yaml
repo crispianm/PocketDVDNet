@@ -1,0 +1,13 @@
+device: auto
+sequence_length: 5
+valset_dir: "${DATA_ROOT}/Set8"
+noise_csv: "dataloaders/predicted_labels.csv"
+recipe_path: "configs/paper/pocketdvdnet_recipe.json"
+checkpoint_path: "checkpoints/pocketdvdnet.pt"
+output_dir: "artifacts/eval_downloaded_student_set8_realistic"
+val_sequence_length: 25
+noise_protocol: "csv_realistic"
+noise_samples: 1
+noise_seed: 1
+noise_seed_mode: "per_sequence"
+fast: false

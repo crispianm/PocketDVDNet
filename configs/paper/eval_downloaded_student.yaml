@@ -1,0 +1,13 @@
+device: auto
+sequence_length: 5
+valset_dir: "${DATA_ROOT}/DAVIS_val"
+noise_csv: "dataloaders/predicted_labels.csv"
+recipe_path: "configs/paper/pocketdvdnet_recipe.json"
+checkpoint_path: "checkpoints/pocketdvdnet.pt"
+output_dir: "artifacts/eval_downloaded_student"
+val_sequence_length: 25
+noise_protocol: "legacy_uniform"
+noise_samples: 99
+noise_seed: 1
+noise_seed_mode: "fixed"
+fast: false

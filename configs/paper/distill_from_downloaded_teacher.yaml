@@ -1,0 +1,29 @@
+seed: 1
+device: auto
+sequence_length: 5
+trainset_dir: "${DATA_ROOT}/train"
+valset_dir: "${DATA_ROOT}/DAVIS_val"
+noise_csv: "dataloaders/predicted_labels.csv"
+external_shift_net_dir: "external/Shift-Net"
+teacher_arch: gshift_denoise1
+teacher_checkpoint: "checkpoints/shift-net_retrained.pth"
+recipe_path: "configs/paper/pocketdvdnet_recipe.json"
+output_dir: "artifacts/distill_from_downloaded_teacher"
+
+batch_size: 32
+patch_size: 160
+iterations: 100000
+num_workers: 4
+num_prefetch_queue: 8
+val_sequence_length: 25
+val_interval: 1000
+scheduler_step_interval: 1000
+noise_seed: 1
+
+lr: 0.001
+distill_alpha: 0.5
+
+scheduler:
+  name: StepLR
+  step_size: 20
+  gamma: 0.6

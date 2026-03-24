@@ -1,0 +1,14 @@
+{
+  "derivation": "published_pocketdvdnet_recipe",
+  "model_name": "PocketDVDNet",
+  "parameter_count": 643236,
+  "recipe": {
+    "down_channels_0": 32,
+    "down_channels_1": 64,
+    "input_group_channels": 30,
+    "num_color_channels": 3,
+    "output_mid_channels": 32,
+    "sequence_length": 5,
+    "stem_channels": 16
+  }
+}

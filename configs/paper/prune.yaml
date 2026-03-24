@@ -1,0 +1,34 @@
+seed: 1
+device: auto
+sequence_length: 5
+trainset_dir: "${DATA_ROOT}/train"
+valset_dir: "${DATA_ROOT}/DAVIS_val"
+output_dir: "artifacts/prune"
+recipe_path: "artifacts/prune/pocketdvdnet_recipe.json"
+
+batch_size: 64
+patch_size: 96
+iterations: 270000
+num_workers: 8
+num_prefetch_queue: 8
+val_sequence_length: 25
+val_interval: 1000
+scheduler_step_interval: 1000
+
+lr: 0.000015
+noise_ival: [5, 55]
+val_noiseL: 25.0
+
+optimizer:
+  lambda_reg: 0.09
+  epoch_size: 10
+  np_steps: 2
+  no_steps: inf
+  eps: 0.001
+  weight_decay: 0.0
+  lambda_warmup_steps: 1
+
+scheduler:
+  name: StepLR
+  step_size: 10000
+  gamma: 0.8

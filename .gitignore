@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+dist/
+build/
+
+# Environments
+.venv/
+.ruff_cache/
+
+# Repo outputs
+/artifacts/
+/results/
+/logs/
+/experiments/
+
+# External dependencies
+/external/
+/Shift-Net/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*.pyc
+checkpoints/shift-net_retrained.pth
+configs/local/
